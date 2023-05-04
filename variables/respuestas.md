@@ -65,7 +65,7 @@ let dineroReal= dineroAhorrado - deudas;
         argumentos cuando las ejecutamos.
 
 ### 2️⃣ Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:
-```
+```js
 const name = "Juan David";
 const lastname = "Castro Gallego";
 const completeName = name + lastname;
@@ -73,7 +73,7 @@ const nickname = "juandc";
 
 console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
 ```
-```
+```js
 function nombreCompleto(name, lastname){
   return name+' '+lastname;
 }
@@ -106,7 +106,7 @@ saludo('Luis', 'Cantuta', 'Gato');
 
 ### 2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
 
-```
+```js
 const tipoDeSuscripcion = "Basic";
 
 switch (tipoDeSuscripcion) {
@@ -135,5 +135,60 @@ if(tipoDeSuscripcion == "Free"){
 }else if(tipoDeSuscripcion == 'ExpertPlus'){
        console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
 }
+
+```
+
+### CICLOS
+### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+    - ¿Qué es un ciclo?
+        R.- La forma de ejecutar un bloque de código haste que se cumpla cierta condición.
+
+    - ¿Qué tipos de ciclos existen en JavaScript?
+        R.- while, do while, for.
+    - ¿Qué es un ciclo infinito y por qué es un problema?
+        R.- Es cuando la validacion de nuestros condicionales nunca se cumple y
+        se termina toteando(dañando) la aplicacion.
+    - ¿Puedo mezclar ciclos y condicionales?
+        R.- Sí, los ciclos son una especie de condicionales y podemos agregar mas
+        condicionales dentro del blucle.
+
+### 2️⃣ Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+
+```js
+for (let i = 0; i < 5; i++) {
+    console.log("El valor de i es: " + i);
+}
+
+let i = 0;
+while(i < 5){
+        console.log("El valor de i es: "+ i);
+        i++;
+}
+
+```
+```js
+
+for (let i = 10; i >= 2; i--) {
+    console.log("El valor de i es: " + i);
+}
+
+let i=10;
+while(i >= 2){
+        console.log(`El valor de i es: ${i}`);
+        i--;
+}
+
+```
+
+### 3️⃣ Escribe un código en JavaScript que le pregunte a los usuarios cuánto es 2 + 2. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
+💡 Pista: puedes usar la función prompt de JavaScript.
+
+```js
+let input;
+do{
+	input=prompt('¿ Cuanto es 2 + 2 ?');
+}while(input != "4");
+console.log("Felicitaciones!!!!!");
 
 ```
