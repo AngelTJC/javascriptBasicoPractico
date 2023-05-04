@@ -192,3 +192,75 @@ do{
 console.log("Felicitaciones!!!!!");
 
 ```
+
+### LISTAS
+### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+    - ¿Qué es un array?
+        R.- Es una lista de elementos.
+
+```js
+        const array=[1, 'hola', true, false];
+```
+    - ¿Qué es un objeto?
+        R.-Es una lista de elementos, pero cada elemento tiene un nombre y clave.
+
+```js
+        const obj={
+                nombre:luis,
+                edad:28,
+                carrera: 'Ingenieria de Sistemas'
+        };
+
+```
+    - ¿Cuándo es mejor usar objetos o arrays?
+        R.-Arrays se usan para lista de datos secuenciales indexados.
+        objetos: cuando esten relacionados y necesitemos ponerles nombre y valor.
+
+    - ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+        R.-Los arrays pueden guardar objetos. Y los objetos pueden guardar arrays
+        entre sus propiedades.
+
+### 2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
+
+```js
+function imprimirPrimerElementoArray(arr){
+  console.log(arr[0]);
+}
+
+imprimirPrimerElementoArray(["Hola", "Mundo", "Preparate"]);
+
+```
+
+### 3️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+
+```js
+function imprimirElementoPorElemento(arr){
+  for(let elemento of arr){
+    console.log(elemento);
+  }
+}
+
+imprimirElementoPorElemento(["Hi", "guys",'How are you?']);
+
+```
+
+### 4️⃣ Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
+
+```js
+function imprimirObjeto(obj){
+  let arr=Object.entries(obj);
+  for(let elem of arr){
+    console.log(elem);
+  }
+}
+
+let obj={
+                nombre:'Luis',
+                edad:28,
+                carrera: 'Ingenieria de Sistemas'
+        };
+
+imprimirObjeto(obj);
+
+```
