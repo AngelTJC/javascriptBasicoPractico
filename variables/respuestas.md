@@ -125,7 +125,7 @@ switch (tipoDeSuscripcion) {
 }
 
 ```
-```
+```js
 if(tipoDeSuscripcion == "Free"){
        console.log("Solo puedes tomar los cursos gratis");
 }else if(tipoDeSuscripcion == "Basic"){
@@ -137,6 +137,58 @@ if(tipoDeSuscripcion == "Free"){
 }
 
 ```
+
+### 3️⃣ Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
+
+```js
+
+function suscripcion(tipoDeSuscripcion){
+    if(tipoDeSuscripcion == "Free"){
+       console.log("Solo puedes tomar los cursos gratis");
+       return ;
+}
+if(tipoDeSuscripcion == "Basic"){
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+       return ;
+}
+if(tipoDeSuscripcion == 'Expert'){
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+       return ;
+}
+if(tipoDeSuscripcion == 'ExpertPlus'){
+       console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+       return ;
+}
+console.warn("No existe la suscripcion");
+}
+suscripcion("Free");
+
+```
+> 💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays u objetos y un solo condicional. 😏
+
+```js
+function conseguirTipoSuscripcion(suscripcion){
+  if(tiposDeSuscripciones[suscripcion]){
+    console.log(tiposDeSuscripciones[suscripcion]);
+    return;
+  }
+  console.warn('Ese tipo de suscripcion no existe!');
+}
+
+const tiposDeSuscripciones={
+  Free: "Solo puedes tomar los cursos gratis",
+  Basic: "Puedes tomar casi todos los cursos de Platzi durante un mes",
+  Expert:"Puedes tomar casi todos los cursos de Platzi durante un año",
+  ExpertPlus:"Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
+};
+
+conseguirTipoSuscripcion("ExpertPlus");
+
+```
+
+
+
+
 
 ### CICLOS
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
